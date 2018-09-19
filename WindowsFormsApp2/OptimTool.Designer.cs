@@ -87,7 +87,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(5);
-            this.label1.Size = new System.Drawing.Size(379, 110);
+            this.label1.Size = new System.Drawing.Size(471, 134);
             this.label1.TabIndex = 9;
             this.label1.Text = "This program allows you to use\r\none button to close all unnecessary\r\napplications" +
     ", delete unsupported files\r\nand Clean RAM of your PC\r\n";
@@ -172,13 +172,14 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.closeToolStripMenuItem,
             this.fontModeToolStripMenuItem,
             this.helpToolStripMenuItem1,
             this.closeToolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(138, 100);
             // 
             // closeToolStripMenuItem
             // 
@@ -186,20 +187,20 @@
             this.fontModeToolStripMenuItem1,
             this.backgroundModeToolStripMenuItem});
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
             this.closeToolStripMenuItem.Text = "View";
             // 
             // fontModeToolStripMenuItem1
             // 
             this.fontModeToolStripMenuItem1.Name = "fontModeToolStripMenuItem1";
-            this.fontModeToolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
+            this.fontModeToolStripMenuItem1.Size = new System.Drawing.Size(206, 26);
             this.fontModeToolStripMenuItem1.Text = "Font Mode";
             this.fontModeToolStripMenuItem1.Click += new System.EventHandler(this.fontModeToolStripMenuItem1_Click);
             // 
             // backgroundModeToolStripMenuItem
             // 
             this.backgroundModeToolStripMenuItem.Name = "backgroundModeToolStripMenuItem";
-            this.backgroundModeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.backgroundModeToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
             this.backgroundModeToolStripMenuItem.Text = "Background Mode";
             this.backgroundModeToolStripMenuItem.Click += new System.EventHandler(this.backgroundModeToolStripMenuItem_Click);
             // 
@@ -208,27 +209,27 @@
             this.fontModeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.informationToolStripMenuItem1});
             this.fontModeToolStripMenuItem.Name = "fontModeToolStripMenuItem";
-            this.fontModeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontModeToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
             this.fontModeToolStripMenuItem.Text = "About us";
             // 
             // informationToolStripMenuItem1
             // 
             this.informationToolStripMenuItem1.Name = "informationToolStripMenuItem1";
-            this.informationToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.informationToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
             this.informationToolStripMenuItem1.Text = "Information";
             this.informationToolStripMenuItem1.Click += new System.EventHandler(this.informationToolStripMenuItem1_Click);
             // 
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(137, 24);
             this.helpToolStripMenuItem1.Text = "Help";
             this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
             // 
             // closeToolStripMenuItem1
             // 
             this.closeToolStripMenuItem1.Name = "closeToolStripMenuItem1";
-            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(137, 24);
             this.closeToolStripMenuItem1.Text = "Close";
             this.closeToolStripMenuItem1.Click += new System.EventHandler(this.closeToolStripMenuItem1_Click);
             // 
@@ -264,7 +265,7 @@
             this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox5.Location = new System.Drawing.Point(169, 137);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(105, 20);
+            this.checkBox5.Size = new System.Drawing.Size(130, 24);
             this.checkBox5.TabIndex = 12;
             this.checkBox5.Text = "System (exe)";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -276,7 +277,7 @@
             this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox7.Location = new System.Drawing.Point(14, 139);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(116, 20);
+            this.checkBox7.Size = new System.Drawing.Size(145, 24);
             this.checkBox7.TabIndex = 16;
             this.checkBox7.Text = "Not using (exe)\r\n";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -288,7 +289,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox1.Location = new System.Drawing.Point(284, 70);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(152, 20);
+            this.checkBox1.Size = new System.Drawing.Size(193, 24);
             this.checkBox1.TabIndex = 21;
             this.checkBox1.Text = "Current Process Only";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -413,7 +414,7 @@
             this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.Location = new System.Drawing.Point(424, 165);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 18);
+            this.label2.Size = new System.Drawing.Size(147, 24);
             this.label2.TabIndex = 22;
             this.label2.Text = "Optim Tool v.0.1";
             // 
@@ -528,6 +529,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(573, 115);
             this.panel6.TabIndex = 31;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseDown);
             this.panel6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseMove);
             this.panel6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseUp);
@@ -538,7 +540,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(509, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 25);
+            this.label5.Size = new System.Drawing.Size(30, 31);
             this.label5.TabIndex = 36;
             this.label5.Text = "_";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -549,7 +551,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(540, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 25);
+            this.label3.Size = new System.Drawing.Size(33, 31);
             this.label3.TabIndex = 34;
             this.label3.Text = "X";
             this.label3.Click += new System.EventHandler(this.label3_Click);

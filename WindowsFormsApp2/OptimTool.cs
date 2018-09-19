@@ -12,7 +12,6 @@ using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CreateProcList;
 using WindowsFormsApp1.Delete;
 using WindowsFormsApp1.success;
 
@@ -21,7 +20,6 @@ namespace WindowsFormsApp1
     public partial class OptimTool : Form
     {
         NotifyIcon ni = new NotifyIcon();
-        ProcList processList = new ProcList();
         LoadBar Lb = new LoadBar();
 
         //List<string> processListForAdd = new List<string>();
@@ -40,7 +38,7 @@ namespace WindowsFormsApp1
         }
 
         //get Access to file and folder
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -103,7 +101,7 @@ namespace WindowsFormsApp1
             //        }
             //    }
             //}
-            Process.Start(@"C:\Users\davom\Desktop\Building project (OPTIMTOOL)\WindowsFormApp1\WindowsFormsApp1\bin\bats\PrefetchDelete.bat");
+            //Process.Start(@"C:\Users\davom\Desktop\Building project (OPTIMTOOL)\WindowsFormApp1\WindowsFormsApp1\bin\bats\PrefetchDelete.bat");
 
 
             Lb.Close();
@@ -115,63 +113,63 @@ namespace WindowsFormsApp1
             countFolders = 0;
         }
 
-        //High Performance
+        ////High Performance
         private void button2_Click(object sender, EventArgs e)
         {
             Hide();
             var Lb = new LoadBar();
             Lb.ShowDialog();
-            if (checkBox1.Checked)
-            {
-                foreach (var Proc in Process.GetProcesses())
-                {
-                    if (processList.PList.Count > 0)
-                    {
-                        for (int i = 0; i < processList.PList.Count; i++)
-                        {
-                            if (Proc.ProcessName.Equals(processList.PList[i]))
-                            {
-                                try
-                                {
-                                    Proc.Kill();
-                                    countProcess++;
-                                }
-                                catch
-                                {
-                                    textBox2.Text += "\r\nAccess denied!";
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            else
-            {
-                foreach (Process Proc in Process.GetProcesses())
-                {
-                    bool isDefault = false;
-                    foreach (var proc1 in processList.defProcList)
-                    {
-                        if (Proc.ProcessName.Equals(proc1))
-                        {
-                            isDefault = true;
-                        }
-                    }
-                    if (!isDefault)
-                    {
-                        try
-                        {
-                            Proc.Kill();
-                            countProcess++;
-                        }
-                        catch
-                        {
-                            textBox2.Text += "\r\nAccess denied!";
-                        }
-                    }
+            //    if (checkBox1.Checked)
+            //    {
+            //        foreach (var Proc in Process.GetProcesses())
+            //        {
+            //            if (processList.PList.Count > 0)
+            //            {
+            //                for (int i = 0; i < processList.PList.Count; i++)
+            //                {
+            //                    if (Proc.ProcessName.Equals(processList.PList[i]))
+            //                    {
+            //                        try
+            //                        {
+            //                            Proc.Kill();
+            //                            countProcess++;
+            //                        }
+            //                        catch
+            //                        {
+            //                            textBox2.Text += "\r\nAccess denied!";
+            //                        }
+            //                    }
+            //                }
+            //            }
+            //        }
+            //    }
+            //    else
+            //    {
+            //        foreach (Process Proc in Process.GetProcesses())
+            //        {
+            //            bool isDefault = false;
+            //            foreach (var proc1 in processList.defProcList)
+            //            {
+            //                if (Proc.ProcessName.Equals(proc1))
+            //                {
+            //                    isDefault = true;
+            //                }
+            //            }
+            //            if (!isDefault)
+            //            {
+            //                try
+            //                {
+            //                    Proc.Kill();
+            //                    countProcess++;
+            //                }
+            //                catch
+            //                {
+            //                    textBox2.Text += "\r\nAccess denied!";
+            //                }
+            //            }
 
-                }
-            }
+            //        }
+            //    }
             Lb.Close();
             SystemSounds.Beep.Play();
             new succ().ShowDialog();
@@ -193,7 +191,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                processList.PList.Add(textBox1.Text);
+                //processList.PList.Add(textBox1.Text);
                 SystemSounds.Beep.Play();
                 textBox2.Text += "\r\nProcess Saved successfully!\r\nPress High Performance!";
             }
@@ -395,7 +393,20 @@ namespace WindowsFormsApp1
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Close();
+            foreach (Process Proc in Process.GetProcesses())
+            {
+                if(Proc.ProcessName.Equals("WindowsFormsApp2"))
+                {
+                    try
+                    {
+                        Proc.Kill();
+                    }
+                    catch
+                    {
+                        textBox2.Text += "\r\nAccess denied!";
+                    }
+                }
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -405,7 +416,12 @@ namespace WindowsFormsApp1
 
         private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Process.Start(@"C:\Users\davom\Desktop\Building project (OPTIMTOOL)\WindowsFormApp1\WindowsFormsApp1\ReadMe.txt");
+            Process.Start(@"*\ReadMe.txt");
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void button3_MouseEnter(object sender, EventArgs e)
